@@ -73,7 +73,7 @@ it("works when you click on the left arrow", function () {
   ).not.toBeInTheDocument();
 });
 
-
+//FIXME: check for visibility after implementing changes
 it("hide right arrow when we reach last image", function () {
   const { container, debug } = render(
     <Carousel
@@ -104,3 +104,6 @@ it("hide Left arrow when displaying first image", function () {
     container.querySelector(".bi-arrow-left-circle"))
     .not.toBeInTheDocument();
 });
+
+//FIXME: could condense tests, on img 2, both arrows are there
+// "test visibility of arrows"

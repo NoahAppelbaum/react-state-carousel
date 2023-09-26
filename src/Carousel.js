@@ -29,7 +29,7 @@ function Carousel({ photos, title }) {
   function goBackward() {
     setCurrCardIdx(currCardIdx - 1);
   }
-
+//FIXME: always render buttons, but control visibility (css???)
   return (
     <div className="Carousel">
       <h1>{title}</h1>
