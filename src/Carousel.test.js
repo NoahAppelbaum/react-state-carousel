@@ -73,37 +73,25 @@ it("works when you click on the left arrow", function () {
   ).not.toBeInTheDocument();
 });
 
-//FIXME: check for visibility after implementing changes
-it("hide right arrow when we reach last image", function () {
+
+it("should show arrows when needed", function () {
   const { container, debug } = render(
     <Carousel
       photos={TEST_IMAGES}
       title="images for testing"
     />
   );
-
   const rightArrow = container.querySelector(".bi-arrow-right-circle");
+  const leftArrow = container.querySelector(".bi-arrow-left-circle");
+
+  expect(leftArrow).not.toBeVisible();
+
   fireEvent.click(rightArrow);
+
+  expect(leftArrow).toBeVisible();
+  expect(rightArrow).toBeVisible();
+
   fireEvent.click(rightArrow);
 
-  expect(
-    container.querySelector(".bi-arrow-right-circle"))
-    .not.toBeInTheDocument();
+  expect(rightArrow).not.toBeVisible();
 });
-
-
-it("hide Left arrow when displaying first image", function () {
-  const { container, debug } = render(
-    <Carousel
-      photos={TEST_IMAGES}
-      title="images for testing"
-    />
-  );
-
-  expect(
-    container.querySelector(".bi-arrow-left-circle"))
-    .not.toBeInTheDocument();
-});
-
-//FIXME: could condense tests, on img 2, both arrows are there
-// "test visibility of arrows"

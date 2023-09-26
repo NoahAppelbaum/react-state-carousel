@@ -29,25 +29,27 @@ function Carousel({ photos, title }) {
   function goBackward() {
     setCurrCardIdx(currCardIdx - 1);
   }
-//FIXME: always render buttons, but control visibility (css???)
+
   return (
     <div className="Carousel">
       <h1>{title}</h1>
       <div className="Carousel-main">
-        {currCardIdx > 0 && <i
+        <i
           className="bi bi-arrow-left-circle"
+          style={currCardIdx === 0 ? { visibility: "hidden" } : {}}
           onClick={goBackward}
-        />}
+        />
         <Card
           caption={currCard.caption}
           src={currCard.src}
           currNum={currCardIdx + 1}
           totalNum={total}
         />
-        {currCardIdx < total - 1 && <i
+        <i
           className="bi bi-arrow-right-circle"
+          style={currCardIdx === total - 1 ? { visibility: "hidden" } : {}}
           onClick={goForward}
-        />}
+        />
       </div>
     </div>
   );
