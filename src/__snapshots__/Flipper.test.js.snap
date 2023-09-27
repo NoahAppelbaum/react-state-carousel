@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot no coin 1`] = `
+<div>
+  <div
+    class="Flipper"
+  >
+    <h1>
+      Let's flip a coin!
+    </h1>
+    <button>
+      FLIP MEEEEEE
+    </button>
+    <p>
+      Out of 
+      0
+       flips, there have been 
+      0
+       heads and 
+      0
+       tails.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`should match snapshot, heads coin 1`] = `
+<div>
+  <div
+    class="Flipper"
+  >
+    <h1>
+      Let's flip a coin!
+    </h1>
+    <div
+      class="Coin"
+    >
+      <img
+        alt="heads"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/2010_cent_obverse.jpg/240px-2010_cent_obverse.jpg"
+      />
+    </div>
+    <button>
+      FLIP MEEEEEE
+    </button>
+    <p>
+      Out of 
+      1
+       flips, there have been 
+      1
+       heads and 
+      0
+       tails.
+    </p>
+  </div>
+</div>
+`;
