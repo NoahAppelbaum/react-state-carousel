@@ -1,12 +1,13 @@
 import "./App.css";
 import Carousel from "./Carousel";
 import photos from "./photos.js";
+import Flipper from "./Flipper";
 
 /** App component, renders Carousel
- * 
+ *
  * Props: none
  * State: none
- * 
+ *
  * App --> Carousel
  */
 
@@ -19,7 +20,9 @@ function App() {
 
   return (
     <div className="App">
-      <Carousel photos={carouselPhotos} title={carouselTitle} />
+      <Flipper />
+
+      {/* <Carousel photos={carouselPhotos} title={carouselTitle} /> */}
     </div>
   );
 }
